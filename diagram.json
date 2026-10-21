@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "author": "AEP student",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "base",
+      "top": -160,
+      "left": 150,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "shoulder",
+      "top": -160,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "elbow",
+      "top": -160,
+      "left": 510,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 250,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": 330,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot3",
+      "top": 410,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultra",
+      "top": 250,
+      "left": 250,
+      "attrs": {
+        "distance": "100"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 250,
+      "left": 450,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw",
+      "top": 350,
+      "left": 450,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "base:V+",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "base:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "base:PWM",
+      "uno:3",
+      "orange",
+      []
+    ],
+    [
+      "shoulder:V+",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "shoulder:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "shoulder:PWM",
+      "uno:5",
+      "orange",
+      []
+    ],
+    [
+      "elbow:V+",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "elbow:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "elbow:PWM",
+      "uno:6",
+      "orange",
+      []
+    ],
+    [
+      "pot1:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "pot1:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "pot1:SIG",
+      "uno:A0",
+      "green",
+      []
+    ],
+    [
+      "pot2:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "pot2:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "pot2:SIG",
+      "uno:A1",
+      "green",
+      []
+    ],
+    [
+      "pot3:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "pot3:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "pot3:SIG",
+      "uno:A2",
+      "green",
+      []
+    ],
+    [
+      "ultra:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "ultra:GND",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "ultra:TRIG",
+      "uno:7",
+      "blue",
+      []
+    ],
+    [
+      "ultra:ECHO",
+      "uno:8",
+      "purple",
+      []
+    ],
+    [
+      "buzzer:2",
+      "uno:4",
+      "gold",
+      []
+    ],
+    [
+      "buzzer:1",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "sw:2",
+      "uno:2",
+      "gray",
+      []
+    ],
+    [
+      "sw:1",
+      "uno:GND.3",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
