@@ -3,8 +3,8 @@
 Servo baseServo; // Servo for the rotating base.
 Servo shoulderServo; // Servo for the shoulder joint.
 Servo elbowServo; // Servo for the elbow joint.
-const byte trigPin = 7; // HC-SR04 trigger pin.
-const byte echoPin = 8; // HC-SR04 echo pin.
+const byte trigPin = 7; // Four-pin HC-SR04 trigger pin.
+const byte echoPin = 8; // Four-pin HC-SR04 echo pin.
 const byte buzzerPin = 4; // Buzzer output pin.
 const byte modePin = 2; // Slide switch input, using INPUT_PULLUP.
 const int nearThresholdCm = 20; // A valid object closer than this triggers the action.
@@ -15,7 +15,7 @@ long readDistanceCm() { // Return approximate distance or -1 if no echo arrives.
   delayMicroseconds(2); // Allow the trigger line to settle.
   digitalWrite(trigPin, HIGH); // Start the sensor trigger pulse.
   delayMicroseconds(10); // Hold the trigger pulse for 10 microseconds.
-  digitalWrite(trigPin, LOW); // End the sensor trigger pulse.
+  digitalWrite(trigPin, LOW); // End the trigger pulse.
   unsigned long echoTimeUs = pulseIn(echoPin, HIGH, 30000UL); // Read echo duration with a maximum wait.
   if (echoTimeUs == 0) { // Check whether the sensor timed out.
     return -1; // Mark the distance as unknown.
